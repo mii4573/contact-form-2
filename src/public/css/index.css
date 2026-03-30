@@ -1,0 +1,99 @@
+
+/* フォーム全体のコンテナ */
+.contact-form__content {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+}
+
+.contact-form__heading{
+margin-bottom: 40px;
+text-align: center;
+color: dimgrey;
+}
+
+/* 各入力項目のグループ */
+.form__group {
+    margin-bottom: 25px;
+}
+
+/* ラベル */
+.form__group-label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.form__required {
+    color: #ff0000;
+    margin-left: 5px;
+}
+
+/* Flexboxによる横並び設定 */
+.form__input-flex {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+/* 電話番号専用の幅調整 */
+.tel-group .form__input--text {
+    flex: 0 1 100px;
+}
+
+/* テキスト入力・セレクト・テキストエリアの共通スタイル */
+.form__input--text input,
+.form__input--select select,
+.form__input--textarea textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+/* ラジオボタンの余白 */
+.form__input--radio {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* 補足説明（姓・名） */
+.form__example {
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 4px;
+}
+
+/* 送信ボタン */
+.form__button {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.form__button-submit {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 80px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form__button-submit:hover {
+    background-color: #555;
+}
+
+/* エラーメッセージ */
+.form__error {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}

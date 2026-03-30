@@ -1,0 +1,83 @@
+
+.confirm__heding {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* 確認用テーブルのスタイル */
+.confirm-table {
+    width: 100%;
+    border-collapse: collapse;
+    /* 枠線を重ねる */
+    margin-bottom: 40px;
+}
+
+.confirm-table__row {
+    border-bottom: 1px solid #ddd;
+    /* 行の下線 */
+}
+
+/* 左側：見出し（ラベル） */
+.confirm-table__header {
+    width: 30%;
+    text-align: left;
+    padding: 20px;
+    background-color: #f9f9f9;
+    /* スポイトで選んだような薄いグレー */
+    font-weight: bold;
+    color: #333;
+}
+
+/* 右側：入力されたデータ */
+.confirm-table__text {
+    width: 70%;
+    padding: 20px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* CSSで改行を反映させる魔法のプロパティ */
+.confirm-table__data {
+    white-space: pre-wrap;
+}
+
+/* ボタンエリア（縦並び・中央寄せ） */
+.form__button-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+/* 送信ボタン（決定） */
+.form__button-submit {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 100px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form__button-submit:hover {
+    background-color: #555;
+}
+
+/* 修正する（戻る）リンクボタン */
+.form__button-back {
+    background: none;
+    border: none;
+    color: #333;
+    text-decoration: underline;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.form__button-back:hover {
+    color: #888;
+}
