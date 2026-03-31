@@ -1,16 +1,20 @@
+/* --- common.css (最小限・最強版) --- */
+
 .header {
     background: #eae8e4;
     border-bottom: 1px solid #eee;
+    width: 100%;
 }
 
 .header__inner {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    /* ロゴを左、ナビを右に強制的に分ける */
     align-items: center;
     margin: 0 auto;
-    padding: 20px 15px;
+    padding: 20px 40px;
+    /* 左右に少し余裕を持たせる */
     max-width: 1230px;
-    position: relative;
 }
 
 .header__logo {
@@ -20,12 +24,13 @@
     font-size: 24px;
 }
 
+/* ナビゲーション全体 */
 .header__nav {
-    position: absolute;
-    right: 15px;
+    display: block;
 }
 
-.header__nav-button .header__nav-button-link {
+/* ボタンの見た目 */
+.header__nav-button-link {
     display: inline-block;
     padding: 8px 30px;
     background: #f4f4f4;
@@ -36,8 +41,7 @@
     transition: 0.3s;
 }
 
-.header__nav-button .header__nav-button-link:hover {
+.header__nav-button-link:hover {
     background: #8b7969;
     color: #fff;
-    border-color: #8b7969;
 }
