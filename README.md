@@ -1,6 +1,6 @@
 # contact-form-2
 
-![ER図](./docs/images/contact-form-2.drawio)
+![ER図](./docs/images/contact-form-2.drawio.png)
 
 # contact-form-2　-Fashionably Late お問い合わせ管理システム-
 

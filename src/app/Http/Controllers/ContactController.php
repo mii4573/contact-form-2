@@ -51,4 +51,10 @@ class ContactController extends Controller
 
        return view('thanks');
     }
+
+     public function admin()
+    {
+        $contacts = Contact::with('category')->latest()->paginate(10);
+        return view ('admin',compact('contacts'));
+    }
 }

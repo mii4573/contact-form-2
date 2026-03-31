@@ -5,11 +5,12 @@
 
 .header__inner {
     display: flex;
-    justify-content: space-between;
-    align-items: center ;
+    justify-content: center;
+    align-items: center;
     margin: 0 auto;
     padding: 20px 15px;
     max-width: 1230px;
+    position: relative;
 }
 
 .header__logo {
@@ -19,3 +20,24 @@
     font-size: 24px;
 }
 
+.header__nav {
+    position: absolute;
+    right: 15px;
+}
+
+.header__nav-button .header__nav-button-link {
+    display: inline-block;
+    padding: 8px 30px;
+    background: #f4f4f4;
+    color: #8b7969;
+    text-decoration: none;
+    border: 1px solid #e0dfde;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.header__nav-button .header__nav-button-link:hover {
+    background: #8b7969;
+    color: #fff;
+    border-color: #8b7969;
+}

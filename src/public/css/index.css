@@ -18,6 +18,7 @@ color: dimgrey;
 /* 各入力項目のグループ */
 .form__group {
     margin-bottom: 25px;
+    color: dimgray
 }
 
 /* ラベル */
@@ -25,6 +26,7 @@ color: dimgrey;
     font-weight: bold;
     margin-bottom: 8px;
     display: block;
+    color: dimgray;
 }
 
 .form__required {
@@ -77,7 +79,7 @@ color: dimgrey;
 }
 
 .form__button-submit {
-    background-color: #333;
+    background-color: #555;
     color: #fff;
     padding: 15px 80px;
     border: none;
