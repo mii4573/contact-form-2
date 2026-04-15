@@ -10,7 +10,7 @@
         <h2>Login</h2>
     </div>
     <div class="login-form">
-        <form class="form" action="/login" method="post">
+        <form class="form" action="/login" method="post" novalidate>
             @csrf
             <div class="form__group">
               <div class="form__group-title">
@@ -26,8 +26,8 @@
                       @enderror
                    </div>
              </div>
-            </div>
-            <div class="form__group">
+             </div>
+             <div class="form__group">
                 <div class="form__group-title">
                     <span class="form__label--item">メールアドレス</span>
                 </div>

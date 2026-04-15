@@ -4,7 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Contact;
+use App\Models\Category;
 use App\Http\Requests\ContactRequest;
+
+
+
+
 
 class ContactController extends Controller
 {
@@ -52,9 +57,38 @@ class ContactController extends Controller
        return view('thanks');
     }
 
-     public function admin()
+     public function admin(Request $request)
     {
-        $contacts = Contact::with('category')->latest()->paginate(10);
-        return view ('admin',compact('contacts'));
+        
+        $query = Contact::with('category');
+
+        if ($request->filled('fullname')) {
+        // 全角・半角スペースを除去して検索（「山田 太郎」でも「山田太郎」でヒットするように）
+        $fullname = str_replace([' ', '　'], '', $request->fullname);
+        $query->whereRaw('CONCAT(last_name, first_name) LIKE ?', ["%{$fullname}%"]);
+        }
+
+        if ($request->filled('email')) {
+        $query->where('email', 'LIKE', "%{$request->email}%");
+        }
+
+        if ($request->filled('gender') && $request->gender != 0) {
+        $query->where('gender', $request->gender);
+        }
+
+        if ($request->filled('category_id')) {
+        $query->where('category_id', $request->category_id);
+        }
+
+        if ($request->filled('date')) {
+        $query->whereDate('created_at', $request->date);
+        }
+
+        $contacts = $query->latest()->paginate(7)->withQueryString();
+
+        $categories = Category::all();
+
+        return view('admin', compact('contacts', 'categories'));
+
     }
 }

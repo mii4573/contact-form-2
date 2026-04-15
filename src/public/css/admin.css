@@ -70,9 +70,26 @@
     cursor: pointer;
 }
 
-/* ページネーションの配置 */
-.admin__pagination {
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
+/* テーブルの行（tr）に対してホバー時の背景色を設定 */
+.admin__table tr:hover {
+    background-color: #f9f8f7;
+    /* 薄いベージュ系（ヘッダーの色に合わせる） */
+    transition: background-color 0.2s ease;
+    /* ふんわり色を変える */
+    cursor: pointer;
+    /* カーソルを指マークにする（任意） */
+}
+
+/* 見出し行（th）だけはホバーで色が変わらないようにする */
+.admin__table tr:first-child:hover {
+    background-color: #8b7969;
+    /* 元の見出しの色を維持 */
+    cursor: default;
+}
+
+/* 詳細ボタンにマウスが乗った時の変化 */
+.admin__detail-btn:hover {
+    background-color: #d1b8a5;
+    color: #fff;
+    transition: 0.3s;
 }

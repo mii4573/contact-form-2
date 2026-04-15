@@ -12,6 +12,8 @@ use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Str;
 use Laravel\Fortify\Fortify;
+use App\Http\Requests\RegisterRequest;
+use App\Http\Requests\LoginRequest;
 
 class FortifyServiceProvider extends ServiceProvider
 {
@@ -42,6 +44,16 @@ class FortifyServiceProvider extends ServiceProvider
 
             return Limit::perMinute(5)->by($throttleKey);
         });
+
+        $this->app->bind(
+            \Laravel\Fortify\Http\Requests\RegisterRequest::class,
+            RegisterRequest::class
+        );    
+
+        $this->app->bind(
+            \Laravel\Fortify\Http\Requests\LoginRequest::class,
+            LoginRequest::class
+        );
 
         
     }

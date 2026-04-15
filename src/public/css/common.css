@@ -45,3 +45,18 @@
     background: #8b7969;
     color: #fff;
 }
+
+.header__nav-button-submit {
+    appearance: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    display: inline-block;
+    padding: 8px 30px;
+    background: #f4f4f4;
+    color: #8b7969;
+    text-decoration: none;
+    border: 1px solid #e0dfde;
+    font-size: 14px;
+    transition: 0.3s;
+}

@@ -19,6 +19,11 @@
         <nav class="header__nav">
             @if (Request::is('login'))
                 <a class="header__nav-button-link" href="/register">register</a>
+            @elseif (Request::is('admin'))
+                <form class="form" action="/logout" method="post">
+                   @csrf
+                   <button class="header__nav-button-submit" type="submit">logout</button>
+                </form>
             @else
                 <a class="header__nav-button-link" href="/login">login</a>
             @endif
